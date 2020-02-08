@@ -69,6 +69,7 @@ $.BootstrapTable = class extends $.BootstrapTable {
     })
 
     $(window).off('click').on('click', (e) => {
+      const $dropdownToggles = $('.dropdown-toggle')
       if ($(e.target).parents('.dropdown-toggle, .dropdown-menu').length === 0 && !$(e.target).hasClass('dropdown-toggle')) {
         $dropdownToggles.next('.dropdown-menu').removeClass('open')
       }
