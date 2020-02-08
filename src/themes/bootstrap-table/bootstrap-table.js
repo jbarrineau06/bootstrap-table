@@ -23,6 +23,14 @@ $.extend($.fn.bootstrapTable.defaults, {
 })
 
 $.BootstrapTable = class extends $.BootstrapTable {
+  init () {
+    super.init()
+
+    $('.modal').on('click', '[data-close]', (e) => {
+      $(e.delegateTarget).removeClass('show')
+    })
+  }
+
   initConstants () {
     super.initConstants()
 

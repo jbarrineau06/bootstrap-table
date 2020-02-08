@@ -246,3 +246,57 @@
     }
   }
 }
+
+.modal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  &.show {
+    display: flex;
+  }
+
+  .btn {
+    border-radius: 4px;
+    background-color: $background;
+    border: 1px solid $btn-border;
+    padding: 6px 12px;
+    outline: none;
+    cursor: pointer;
+
+    &.active {
+      border-color: black;
+    }
+  }
+
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 998;
+    background-color: rgba(10,10,10,.86);
+  }
+
+  .modal-content {
+    position: relative;
+    width: 600px;
+    margin: 30px auto;
+    z-index: 999;
+
+    .box {
+      background-color: #fff;
+      border-radius: 6px;
+      display: block;
+      padding: 1.25rem;
+    }
+  }
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
